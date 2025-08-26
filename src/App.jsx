@@ -1,16 +1,27 @@
-// App.jsx
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import PageLayout from "./layout/PageLayout";
+import React from "react";
+import Navbar from "./components/Navbar";
+import Ticker from "./pages/Ticker";
 import Home from "./pages/Home";
+import Zones from "./pages/Zones";
+import Gallery from "./pages/Gallery";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Feedback from "./pages/Feedback";
+import Footer from "./components/Footer";
+
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<PageLayout />}>
-          <Route index element={<Home />} />
-        </Route>
-      </Routes>
-    </Router>
+    <>
+      <Navbar />
+      <Home />
+      <Zones />
+      <Gallery />
+      <About />
+      <Contact />
+      <Feedback />
+      <Footer/>
+      <Ticker />
+    </>
   );
 }
 
